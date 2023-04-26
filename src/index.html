@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan Emi Calculator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="calculator-container">
+      <div class="wrapper">
+        <h2>Loan EMI Calculator</h2>
+        <span class="div-bar"></span>
+        <div class="calculator">
+          <div class="calculator-input">
+            <label for="loan_amount">Loan Amount(in Rs):</label>
+            <input type="number" id="loan_amount" />
+          </div>
+          <div class="calculator-input">
+            <label for="loan_tenure">Loan Tenure(in Year):</label>
+            <input type="number" id="loan_tenure" />
+          </div>
+          <div class="calculator-input">
+            <label for="loan_interest">Interest Rate (%):</label>
+            <input type="number" id="loan_interest" />
+          </div>
+          <div class="calculator-input">
+            <button class="calculator-btn">Calculate Your EMI</button>
+          </div>
+        </div>
+
+        <div class="calculator-result">
+          <canvas id="loanChart"></canvas>
+          <ul>
+            <li>Monthly Loan EMI: <span class="loan_emi"></span></li>
+            <li>Principle Amount: <span class="loan_principle"></span></li>
+            <li>Loan on Interest: <span class="loan_interest_rate"></span></li>
+            <li>Total Amount to be Paid: <span class="loan_total"></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
